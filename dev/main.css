@@ -157,8 +157,8 @@ section.phone-slider:before, section.phone-slider:after {
 }
 
 /*section.phone-slider:hover::before, section.phone-slider:hover:after {
-    transform: scale(1.5);
-    transition-duration: 500ms;
+    filter: invert(85%) sepia(44%) saturate(1948%) hue-rotate(23deg) brightness(102%) contrast(103%);
+    transition-duration: 1500ms;
 }*/
 
 section.phone-slider:before{
@@ -234,39 +234,43 @@ section.service .flex{
     margin-bottom: 31px;
 }
 
-.item img {
-    width: 37px;
-    height: 36px;
-    margin: 4px 1px;
-    padding: 10px;
-    border: .8px solid rgb(102, 109, 137);
+.item .img-wrapper {
+    width: 55px;
+    height: 55px;
+    margin-top: 4px;
+    border: 1.8px solid rgb(102, 109, 137);
     border-radius: 50%;
-    overflow:visible;
+}
+
+.item img {
+    width: 35px;
+    height: 35px;
+    margin: 5px 4px;
+    padding: 6px;
 }
 
 .item .content {
-    margin-left: 13px;
+    margin-left: 10px;
 }
 
 .item .header {
     font-family: 'Lato-black';
     font-size: 18px;
+    word-spacing: -0.6px;
 }
 
 .item .comments {
     font-family: 'Lato-regular';
-    margin-top: 10px;
+    margin-top: 11px;
     line-height: 21px;
     font-size: 12px;
+    letter-spacing: 0.4px;
     text-align: justify;
+    word-spacing: -0.6px;
 }
 
 .flex .item:nth-child(3n) .header {
     padding-left: 1.5px;
-}
-
-.flex .item:first-child img{
-    z-index:1
 }
 
 /*======================FOOTER======================*/
