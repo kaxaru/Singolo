@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./dev/singolo3.css?v=1.2">
+    <link rel="shortcut icon" href="./assets/pics/favicon.ico" type="image/x-icon">
+    <title>Quote</title>
+</head>
+<body>
+    <div class="container">
+        <section class="quote">
+            <div class="quote-wrapper">
+                <div class="header">
+                    <h1>Get a Quote</h1>
+                    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
+                        Duis mollis, non commodo luctus, nisi erat porttitor ligula, 
+                        eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus
+                        commodo, tortor mauris condimentum nibh.</p>
+                </div>
+                <div class="contacts">
+                    <div class="form">
+                        <form action="">
+                            <input type="text" pattern="/^[A-Za-z ]{1,24}$/" name="name" maxlength="24" placeholder="Name (Required)" required>
+                            <input type="text" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" name="mail" placeholder="Email (Required)" required>
+                            <input type="text" name="subject" placeholder="Subject">
+                            <textarea name="comment" placeholder="Describe in your project in detail..."  id="" cols="30" rows="10" ></textarea>
+                            <input type="submit">
+                        </form>
+                    </div>
+                    <div class="info">
+                        <h4>Contact Information</h4>
+                        <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viver- ra nibh. 
+                            Fusce vitae aliquam tellus. Proin sit amet volutpat libero. 
+                            Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis,
+                            et consequat felis. 
+                        </p>
+                        <div class="adress">
+                            <span class="location">Elm St. 14/05 Lost City </span>
+                            <span class="phone"><a href="tel: +03528 331 86 35"> 03528 331 86 35</a></span>
+                            <span class="mail"><a href="mailto:info@singolo.com">info@singolo.com</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-wrapper">
+                <p class="year">©Copyright 2013</p>
+                <div class="social">
+                    <div class="img-wrapper">
+                        <img src="./assets/pics/portfolio/facebook.png" alt="">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="./assets/pics/portfolio/google+.png" alt="">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="./assets/pics/portfolio/twitter.png" alt="">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="./assets/pics/portfolio/linkedin.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

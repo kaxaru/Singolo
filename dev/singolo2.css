@@ -85,33 +85,42 @@ main {
 }
 
 .triggers {
+    margin-bottom: 20px;
     font-family: 'Lato-regular' !important;
     font-size: 12px !important;
-    margin-bottom: 20px;
 }
 
 .triggers button {
+    padding-top: 5px;
+    padding-right: 8px;
+    padding-bottom: 3px;
+    margin-top: 8px;
+    margin-left:8px;
     border: 1px solid rgb(102, 109, 137);
-    border-radius: 12%;
+    border-radius: 5px;
+    line-height: 11px;
+    text-align: justify;
     background-color: rgb(45, 48, 58);
     color: rgb(102, 109, 137);
-    padding-top: 5px;
-    margin-top: 8px;
-    margin-left:10px;
-    text-align: justify;
 }
 
-.triggers button:first-child{
+.triggers button:first-child {
+    margin: 0;
+    margin-right: -2px;
     border: 1px solid white;
     color: white;
-    margin: 0;
+}
+
+.triggers button:hover {
+    border: 1px solid white;
+    color: white;
 }
 
 .gallery {
-    margin-top: 9px;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 48px;
+    margin-top: 9px;
+    margin-bottom: 47px;
 }
 
 .gallery .item {
@@ -143,7 +152,7 @@ section.about {
 }
 
 .about .wrapper {
-    padding-top: 32px;
+    padding-top: 33px;
 }
 
 .header p {
@@ -153,7 +162,7 @@ section.about {
     font-family: 'Lato-light';
     font-size: 18px;
     text-align: justify;
-    line-height: 29px;
+    line-height: 30px;
 }
 
 .content {
@@ -162,22 +171,26 @@ section.about {
 
 .content .item {
     width: 32%;
-    margin-left:-2px;
+    margin-left:-3px;
 }
 
 .content .item:not(:first-of-type) {
     margin-left: 6px;
 }
 
+.content:last-child img {
+    margin-left: 1px;
+}
+
 .content .comments {
     max-width: 300px;
-    margin-top: -13px;
+    margin-top: -14px;
 }
 
 .item h4 {
+    margin-bottom: 10px;
     font-family: 'Lato-black';
     font-size: 18px;
-    margin-bottom: 10px;
 }
 
 .item p {
@@ -191,8 +204,8 @@ section.about {
 .item .social {
     display: flex;
     align-items: center;
-    padding-top:15px;
     margin-bottom: 65px;
+    padding-top:15px;
 }
 
 .social .img-wrapper {
@@ -200,6 +213,14 @@ section.about {
     height: 30px;
     border: 1px solid rgb(105, 112, 139);
     border-radius: 50%;
+}
+
+.social .img-wrapper:hover {
+    border: 1px solid #d3b503;
+}
+
+.social .img-wrapper:hover img {
+    filter: invert(100%);
 }
 
 .social .img-wrapper:not(:first-of-type) {
