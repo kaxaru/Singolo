@@ -121,6 +121,8 @@ main {
     flex-wrap: wrap;
     margin-top: 9px;
     margin-bottom: 47px;
+    max-height: 620px;
+    overflow: hidden;
 }
 
 .gallery .item {
@@ -155,6 +157,10 @@ section.about {
     padding-top: 33px;
 }
 
+.header {
+    padding-top: 2px;
+}
+
 .header p {
     margin-top: -5px;
     margin-bottom: 45px;
@@ -184,7 +190,7 @@ section.about {
 
 .content .comments {
     max-width: 300px;
-    margin-top: -14px;
+    margin-top: -16px;
 }
 
 .item h4 {
