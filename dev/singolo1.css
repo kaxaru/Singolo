@@ -146,7 +146,7 @@ main {
     position: relative;
 }
 
-section.phone-slider {
+.phone-slider {
     position: relative;
     display: flex;
     justify-content: flex-start;
@@ -209,10 +209,15 @@ section.phone:after {
     background-color: rgb(234, 103, 107);
 }
 
+/*======================Service======================*/
+
 section.service {
-    padding: 35px 40px;
-    background-color: #f2f2f2;
+    background-color: #cacaca;
     color: rgb(102, 109, 137);
+}
+
+.service-wrapper {
+    padding: 35px 40px 34px 40px;
 }
 
 section.service h2{
@@ -232,7 +237,7 @@ section.service p {
 }
 
 
-section.service .flex{
+section.service .service-flex{
     display: flex;
     flex-wrap: wrap;
     margin-top: 43px;
@@ -240,15 +245,15 @@ section.service .flex{
     justify-content: space-between;
 }
 
-.flex .item{
+.service-flex .service-item{
     display: grid;
-    grid-template-columns: 4fr 25fr;
+    grid-template-columns: 3fr 11fr;
     grid-gap: 0.7vw;
     width: 32%;
     margin-bottom: 30px;
 }
 
-.item .img-wrapper {
+.service-item .img-wrapper {
     width: 55px;
     height: 55px;
     margin-top: 4px;
@@ -256,24 +261,24 @@ section.service .flex{
     border-radius: 50%;
 }
 
-.item img {
+.service-item img {
     width: 35px;
     height: 34px;
     margin: 5px 5px;
     padding: 6px;
 }
 
-.item .content {
+.service-item .content {
     margin-left: 6px;
 }
 
-.item .header {
+.service-item .header {
     font-family: 'Lato-black';
     font-size: 18px;
     word-spacing: -0.6px;
 }
 
-.item .comments {
+.service-item .comments {
     margin-top: 11px;
     font-size: 12px;
     font-family: 'Lato-regular';
@@ -283,20 +288,20 @@ section.service .flex{
     letter-spacing: 0.4px;
 }
 
-.flex .item:nth-child(3n) .header {
+.service-flex .service-item:nth-child(3n) .header {
     padding-left: 1.5px;
+}
+
+.service:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height:6px;
+    background-color: white;
 }
 
 /*======================FOOTER======================*/
 
-footer {
-    position: relative;
-    margin-top: -5px;
-}
-
-footer .line {
-    background-color: white;
-}
 
 
 

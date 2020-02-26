@@ -35,7 +35,7 @@
     font-style: normal;
 }
 
-.container {
+.portfolio-container {
     position: relative;
     width: 1020px;
     margin: 0 auto;
@@ -55,6 +55,10 @@ h2{
     font-size: 30px;
 }
 
+/*.header {
+    font-family: 'Lato-bold';
+}*/
+
 button {
     font-family: 'Lato-regular' !important;
     font-size: 12px !important;
@@ -62,13 +66,14 @@ button {
 
 /*======================Header======================*/
 
-header {
+.portfolio-header {
     padding-top: 62px;
     padding-left: 40px;
     line-height: 34px;
+    font-family: 'Lato-bold';
 }
 
-header p {
+.portfolio-header  p {
     font-family: 'Lato-light';
     font-size: 18px;
 }
@@ -76,21 +81,21 @@ header p {
 
 /*======================Portfolio======================*/
 
-main {
+.portfolio {
     margin-top: -18px;
 }
 
-.wrapper {
+.portfolio-wrapper {
     margin-left: 40px;
 }
 
-.triggers {
+.portfolio-triggers {
     margin-bottom: 20px;
     font-family: 'Lato-regular' !important;
     font-size: 12px !important;
 }
 
-.triggers button {
+.portfolio-triggers button {
     padding-top: 5px;
     padding-right: 8px;
     padding-bottom: 3px;
@@ -104,19 +109,19 @@ main {
     color: rgb(102, 109, 137);
 }
 
-.triggers button:first-child {
+.portfolio-triggers button:first-child {
     margin: 0;
     margin-right: -2px;
     border: 1px solid white;
     color: white;
 }
 
-.triggers button:hover {
+.portfolio-triggers button:hover {
     border: 1px solid white;
     color: white;
 }
 
-.gallery {
+.portfolio-gallery {
     display: flex;
     flex-wrap: wrap;
     margin-top: 9px;
@@ -125,20 +130,20 @@ main {
     overflow: hidden;
 }
 
-.gallery .item {
+.portfolio-gallery .item {
     width: 24%;
     margin-bottom: 16px;
 }
 
-.gallery .item:not(:nth-child(4n+1)) {
+.portfolio-gallery .item:not(:nth-child(4n+1)) {
     padding-left: 4px;
 }
 
-.gallery .item:nth-child(4n) {
+.portfolio-gallery .item:nth-child(4n) {
     padding-left: 6px;
 }
 
-.portfolio:after {
+.portfolio-content:after {
     content: '';
     display: block;
     width:100%;
@@ -153,15 +158,16 @@ section.about {
     background-color: #f2f2f2;
 }
 
-.about .wrapper {
+.about-wrapper {
+    margin-left: 40px;
     padding-top: 33px;
 }
 
-.header {
+.about-header {
     padding-top: 2px;
 }
 
-.header p {
+.about-header p {
     margin-top: -5px;
     margin-bottom: 45px;
     max-width: 940px;
@@ -171,35 +177,36 @@ section.about {
     line-height: 30px;
 }
 
-.content {
+.about-content {
     display: flex;
 }
 
-.content .item {
+.about-content .item {
     width: 32%;
     margin-left:-3px;
 }
 
-.content .item:not(:first-of-type) {
+.about-content .item:not(:first-of-type) {
     margin-left: 6px;
 }
 
-.content:last-child img {
+.about-content:last-child img {
     margin-left: 1px;
 }
 
-.content .comments {
+.about-content .comments {
     max-width: 300px;
     margin-top: -16px;
+    margin-left: 2px;
 }
 
-.item h4 {
+.about-content .item h4 {
     margin-bottom: 10px;
     font-family: 'Lato-black';
     font-size: 18px;
 }
 
-.item p {
+.about-content .item p {
     font-family: 'Lato-regular';
     font-size: 12px;
     text-align: justify;
@@ -207,45 +214,48 @@ section.about {
     word-spacing: 2px;
 }
 
-.item .social {
+.about-content .item .about-social {
     display: flex;
     align-items: center;
     margin-bottom: 65px;
     padding-top:15px;
+    margin-left: -2px;
 }
 
-.social .img-wrapper {
+.about-social .img-wrapper {
     width: 30px;
     height: 30px;
     border: 1px solid rgb(105, 112, 139);
     border-radius: 50%;
 }
 
-.social .img-wrapper:hover {
+.about-social .img-wrapper:hover {
     border: 1px solid #d3b503;
 }
 
-.social .img-wrapper:hover img {
+.about-social .img-wrapper:hover img {
     filter: invert(100%);
 }
 
-.social .img-wrapper:not(:first-of-type) {
+.about-social .img-wrapper:not(:first-of-type) {
     margin-left:8px;
 }
 
-.img-wrapper img {
+.about-social .img-wrapper img {
     padding: 8px;
 }
 
-.social .img-wrapper:first-child {
+.about-social .img-wrapper:first-child {
     margin-left: 4px;
 }
 
-.social .img-wrapper:first-child img {
+.about-social .img-wrapper:first-child img {
     padding-left:11px;
 }
 
-footer {
+section.about:after {
+    content: '';
+    display: block;
     width: 100%;
     height:6px;
     background-color: white;

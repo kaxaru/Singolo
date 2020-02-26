@@ -35,7 +35,7 @@
     font-style: normal;
 }
 
-.container {
+.quote-container {
     position: relative;
     width: 1020px;
     margin: 0 auto;
@@ -75,7 +75,7 @@ section.quote h1 {
     padding-bottom: 2px;
 }
 
-section.quote .header p {
+section.quote .quote-header p {
     max-width: 939px;
     font-family: 'Lato-light';
     font-size: 18px;
@@ -84,26 +84,26 @@ section.quote .header p {
     
 }
 
-section .contacts {
+section.quote .quote-contacts {
     display: grid;
     grid-template-columns: 638px 300px;
     flex-wrap: nowrap;
     margin-top: 44px;
 }
 
-section .form {
+section.quote .quote-form {
     min-width: 200px;
     margin-right: 20px;
 }
 
-.form input,
-.form textarea {
+.quote-form input,
+.quote-form textarea {
     background-color: rgb(214, 86, 79);
     text-indent: 13px;
     color:white;
 }
 
-.form input {
+.quote-form input {
     width: 100%;
     margin-bottom: 17px;
     height: 35px;
@@ -111,8 +111,8 @@ section .form {
     border-radius: 5px;
 }
 
-.form input::placeholder,
-.form textarea::placeholder {
+.quote-form input::placeholder,
+.quote-form textarea::placeholder {
    padding-bottom: 2px;
    font-family: 'Lato-regular';
    font-size: 12px;
@@ -120,31 +120,31 @@ section .form {
    word-spacing: 3px;
 }
 
-.form textarea::placeholder {
-    padding-top: 10px;
+.quote-form textarea::placeholder {
     word-spacing: 1px;
 }
 
-.form textarea {
+.quote-form textarea {
     width: 99.5%;
+    min-height: 190px;
+    padding-top: 10px;
     border: 0;
     border-radius: 5px;
-    min-height: 198px;
     resize: none;
 }
 
-input[type=submit] {
+.quote-form input[type=submit] {
     margin-top:10px;
 }
 
 
-.info h4 {
+.quote-info h4 {
     font-family: 'Lato-black';
     font-size: 18px;
     margin-top: -2px;
 }
 
-.info p {
+.quote-info p {
     margin-top: -14px;
     font-family: 'Lato-regular';
     font-size: 12px;
@@ -157,18 +157,18 @@ input[type=submit] {
     -ms-hyphens: auto;
 }
 
-.contacts .adress {
+.quote-contacts .adress {
     margin-top: 26px
 }
 
-.contacts .adress span{
+.quote-contacts .adress span{
     display: block;
     font-family: 'Lato-regular';
     font-size: 12px;
     margin-bottom: 8px;
 }
 
-.contacts .adress span:before {
+.quote-contacts .adress span:before {
     content: '';
     display: inline-block;
     width: 14px;
@@ -177,31 +177,31 @@ input[type=submit] {
     margin-left: 2px;
 }
 
-span.location:before {
+.quote-info span.location:before {
     background: url(../assets/pics/location.png) 0 0 no-repeat;
     background-position: center;
     background-size: contain;
 }
 
-span.phone:before {
+.quote-info span.phone:before {
     background: url(../assets/pics/phone.png) 0 0 no-repeat;
     background-position: center;
     background-size: contain;
 }
 
-span.phone a {
+.quote-info span.phone a {
     text-decoration: none;
     color: white;
 }
 
-span.mail:before {
+.quote-info span.mail:before {
     background: url(../assets/pics/mail.png) 0 0 no-repeat;
     background-position: center;
     background-size: contain;
 }
 
 
-span.mail a {
+.quote-info span.mail a {
     text-decoration: none;
     color: white;
 }
@@ -228,12 +228,12 @@ footer {
     letter-spacing: 0.4px;
 }
 
-.footer-wrapper .social {
+.footer-wrapper .footer-social {
     flex-grow: 0;
 
 }
 
-.footer-wrapper .social .img-wrapper {
+.footer-social .img-wrapper {
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -242,33 +242,33 @@ footer {
     margin-right: 4px;
 }
 
-.social .img-wrapper img {
+.footer-social .img-wrapper img {
     padding-left: 7px;
     padding-top:8px;
 }
  
-.social .img-wrapper:first-child img{
+.footer-social .img-wrapper:first-child img{
     padding-left: 10px
 }
 
-.social .img-wrapper:nth-child(3n) {
+.footer-social .img-wrapper:nth-child(3n) {
     margin-bottom: 5px;
 }
 
-.social .img-wrapper:not(:nth-child(3n)) {
+.footer-social .img-wrapper:not(:nth-child(3n)) {
     margin-top: 3px;
 }
 
-.social .img-wrapper:nth-child(3n) img {
+.footer-social .img-wrapper:nth-child(3n) img {
     padding-left: 7px;
     padding-top: 9px;
 }
 
-.social .img-wrapper:hover {
+.footer-social .img-wrapper:hover {
     border: 1px solid #d3b503;
 }
 
-.social .img-wrapper:hover img {
+.footer-social .img-wrapper:hover img {
     filter: invert(100%);
 }
 
