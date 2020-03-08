@@ -229,8 +229,10 @@
                         </div>
                         <div class="quote-contacts">
                             <div class="quote-form">
-                                <form action="">
-                                    <input type="text" pattern="/^[A-Za-z ]{1,24}$/" name="name" maxlength="24" placeholder="Name (Required)" required>
+                                <form id="quote-form">
+                                    <input type="text" pattern="/[A-Za-zA-Яа-я ]{1,24}/" name="username"
+                                        placeholder="Name (Required)"
+                                        required>
                                     <input type="text" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" name="mail" placeholder="Email (Required)" required>
                                     <input type="text" name="subject" placeholder="Subject">
                                     <textarea name="comment" placeholder="Describe in your project in detail..."  id="" cols="30" rows="10" ></textarea>
@@ -275,5 +277,15 @@
             </div>
         </footer>
     </div>
+    <script>
+       /* var form = document.getElementById('quote-form');
+        form[0].addEventListener('invalid', (e)=> {
+            event.preventDefault();
+        })
+
+        form[1].addEventListener('invalid', (e)=> {
+            event.preventDefault();
+        })*/
+    </script>
 </body>
 </html>

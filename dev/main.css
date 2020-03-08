@@ -285,6 +285,8 @@ section.service .service-flex{
 
 .service-item .comments {
     margin-top: 11px;
+    max-height: 62px;
+    overflow: hidden;
     font-size: 12px;
     font-family: 'Lato-regular';
     text-align: justify;
@@ -453,6 +455,9 @@ section.about {
 
 .about-content .item h4 {
     margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-family: 'Lato-black';
     font-size: 18px;
 }
