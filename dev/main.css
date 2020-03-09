@@ -420,6 +420,10 @@ section.about {
     padding-top: 2px;
 }
 
+.about-header h2 {
+    font-size: 30px;
+}
+
 .about-header p {
     margin-top: -5px;
     margin-bottom: 45px;
