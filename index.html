@@ -15,29 +15,45 @@
                 <h1>Singolo</h1>
                 <nav>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a class="active" href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
-        </header>
-        <main>
+        </header> 
+        <main id="home">
             <section class="phone">
                 <div class="phone-slider">
                     <span class="prev"></span>   
                     <div class="phone vertical">
                         <img src="./assets/pics/iPhone Vertical.png" alt="">
+                        <img class="invisible" src="./assets/pics/iPhone Vertical Off.png" alt="">
                     </div>
                     <div class="phone horisontal">
                         <img src="./assets/pics/iPhone Horizontal.png" alt="">
+                        <img class="invisible" src="./assets/pics/iPhone Horizontal Off.png" alt="">
                     </div>
                     <span class="next"></span>
                 </div>
+                <!--
+                <div class="phone-slider">
+                    <span class="prev"></span>   
+                    <div class="phone vertical">
+                        <img src="./assets/pics/iPhone Vertical.png" alt="">
+                        <img class="invisible" src="./assets/pics/iPhone Vertical Off.png" alt="">
+                    </div>
+                    <div class="phone horisontal">
+                        <img src="./assets/pics/iPhone Horizontal.png" alt="">
+                        <img class="invisible" src="./assets/pics/iPhone Horizontal Off.png" alt="">
+                    </div>
+                    <span class="next"></span>
+                </div>
+            -->
             </section>
-            <section class="service">
+            <section class="service" id="services">
                 <div class="service-wrapper">
                     <h2>Our Services</h2>
                     <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat
@@ -100,7 +116,7 @@
                     </div>
                 </div>
             </section>
-            <div class="portfolio-container">
+            <div class="portfolio-container" id="portfolio">
                 <div class="portfolio-header">
                     <h1>Portfolio</h1>
                     <p>
@@ -112,7 +128,7 @@
                     <section class="portfolio-content">
                         <div class="portfolio-wrapper">
                             <div class="portfolio-triggers">
-                                <button>All</button>
+                                <button class="active">All</button>
                                 <button>Web Design</button>
                                 <button>Graphic Design</button>
                                 <button>Artwork</button>
@@ -136,7 +152,7 @@
                             </div>
                         </div>
                     </section>
-                    <section class="about">
+                    <section class="about" id="about">
                         <div class="about-wrapper">
                             <div class="about-header">
                                 <h2>About Us</h2>
@@ -218,7 +234,7 @@
                 </section>
             </div>
             <div class="quote-container">
-                <section class="quote">
+                <section class="quote" id="contact">
                     <div class="quote-wrapper">
                         <div class="quote-header">
                             <h1>Get a Quote</h1>
@@ -277,15 +293,18 @@
             </div>
         </footer>
     </div>
-    <script>
-       /* var form = document.getElementById('quote-form');
-        form[0].addEventListener('invalid', (e)=> {
-            event.preventDefault();
-        })
-
-        form[1].addEventListener('invalid', (e)=> {
-            event.preventDefault();
-        })*/
-    </script>
+    <!--
+    <div class="dimmer modals transition visible">
+        <div class="small modal transition visible">
+            <div class="content"></div>
+            <div class="actions">
+                <div class="green ok inverted button">
+                    OK
+                </div>
+            </div>
+        </div>
+    </div>
+--->
+    <script src="dev/main.js"></script>
 </body>
 </html>
