@@ -155,18 +155,37 @@ main {
     position: relative;
 }
 
+section.phone {
+    width: 100%;
+	overflow: hidden;
+	position: relative;
+
+	box-sizing: border-box;
+}
+
 .phone-slider {
     position: relative;
     display: flex;
+    flex: 0 0 100%;
     justify-content: flex-start;
     align-items: center;
     min-height: 594px;
     background-color: rgb(240, 108, 100);
 }
 
-.phone-slider .prev, 
-.phone-slider .next {
+.phone-slider__wrapper {
+    display: flex;
+    transition: transform .5s;
+    will-change: transform;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+
+.phone .prev, 
+.phone .next {
     content: '';
+    z-index: 100;
     position: absolute;
     top:282px;
     height: 32px;
@@ -180,22 +199,23 @@ main {
     transition: 1s filter cubic-bezier(0, 0.88, 0.58, 1), 1s -webkit-filter cubic-bezier(0, 0.88, 0.58, 1);
 }
 
-.phone-slider .prev {
+.phone .prev {
+    transform: translateZ(0);
     left: 41px; 
 }
 
-.phone-slider .next {
+.phone .next {
     right: 41px;
-    transform: rotateY(180deg);
+    transform: rotateY(180deg) translateZ(0);
 }
 
-.phone-slider .prev:hover, 
-.phone-slider .next:hover{
+.phone .prev:hover, 
+.phone .next:hover{
     transform: scale(1.5);
     filter: invert(85%) sepia(44%) saturate(1948%) hue-rotate(23deg) brightness(102%) contrast(103%);
 }
 
-.phone-slider .next:hover{
+.phone .next:hover{
     transform: scale(1.5) rotateY(180deg);
 }
 
