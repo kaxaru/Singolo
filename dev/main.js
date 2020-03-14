@@ -121,5 +121,55 @@
         }
     })
 
+    // 6 submit form
+
+    let form = document.querySelector('#quote-form')
+    let submit = form.querySelector('input[type = "submit"]')
+    let modal = document.querySelector('.dimmer.modals');
+    submit.addEventListener('click', (e) => {
+      /* document.body.classList.add('dimmer')
+       modal.classList.remove('hidden')
+       modal.classList.add('visible')
+       let childNode = modal.children[0]
+       childNode.classList.remove('hidden')
+       childNode.classList.add('visible')*/
+    })
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let subject = e.currentTarget.querySelector('input[name = subject]');
+        let desc = e.currentTarget.querySelector('textarea[name =comment]');
+        let content = modal.querySelector('.content')
+        content.innerHTML = '';
+        subject = subject.value == '' ? 'Без темы' : subject.value 
+        desc = desc.value == '' ? 'Без описания' : desc.value 
+
+        let templateMail = ` <span>Письмо отправлено</span> <span class='subject'>${subject}</span> <span class='desc'>${desc}</span>`
+        content.innerHTML = templateMail
+
+       document.body.classList.add('dimmed')
+       modal.classList.remove('hidden')
+       modal.classList.add('visible')
+       modal.style = "display: flex !important"
+       let childNode = modal.children[0]
+       childNode.classList.remove('hidden')
+       childNode.classList.add('visible')
+       childNode.classList.add('active')
+    })
+
+    let modalButton = modal.querySelector('.ok.button')
+    modalButton.addEventListener('click', (e) => {
+        document.body.classList.remove('dimmed')
+        modal.classList.remove('visible')
+        modal.classList.add('hidden')
+        let childNode = modal.children[0]
+        childNode.classList.remove('visible')
+        childNode.classList.remove('active')
+        childNode.classList.add('hidden')
+        modal.style = "display: 0"
+        form.reset()
+        let content = modal.querySelector('.content')
+        content.innerHTML = '';
+    })
+
 
 })()

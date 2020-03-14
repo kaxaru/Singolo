@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="./assets/pics/favicon.ico" type="image/x-icon">
     <title>Singolo</title>
 </head>
-<body>
+<body class="dimmable" ontouchstart>
     <div class="container">
         <header>
             <div class="header-content">
@@ -256,11 +256,11 @@
                         </div>
                         <div class="quote-contacts">
                             <div class="quote-form">
-                                <form id="quote-form">
-                                    <input type="text" pattern="/[A-Za-zA-Яа-я ]{1,24}/" name="username"
+                                <form id="quote-form" action="#">
+                                    <input type="text" name="username" pattern="[A-Za-zA-Яа-я ]{1,24}" 
                                         placeholder="Name (Required)"
                                         required>
-                                    <input type="text" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" name="mail" placeholder="Email (Required)" required>
+                                    <input type="text" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" name="mail" placeholder="Email (Required)" required>
                                     <input type="text" name="subject" placeholder="Subject">
                                     <textarea name="comment" placeholder="Describe in your project in detail..."  id="" cols="30" rows="10" ></textarea>
                                     <input type="submit">
@@ -304,9 +304,8 @@
             </div>
         </footer>
     </div>
-    <!--
-    <div class="dimmer modals transition visible">
-        <div class="small modal transition visible">
+    <div class="dimmer modals transition hidden">
+        <div class="small basic modal transition hidden">
             <div class="content"></div>
             <div class="actions">
                 <div class="green ok inverted button">
@@ -315,7 +314,6 @@
             </div>
         </div>
     </div>
---->
     <script src="./dev/main.js"></script>
 </body>
 </html>
