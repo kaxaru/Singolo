@@ -36,8 +36,8 @@
 
         configure.prevSlide = () => {
             --configure.addSetting.position;
-            if(configure.addSetting.position <= 0) {
-                configure.addSetting.position = 0
+            if(configure.addSetting.position < 0) {
+                configure.addSetting.position = configure.addSetting.max_position - 1
             }
 
             configure.dom.wrap.style["transform"] = `translateX(-${configure.addSetting.position}00%)`
@@ -58,7 +58,7 @@
     }
 
     // 3 Slider: activate phones
-    document.querySelector('.phone-slider').addEventListener("click", function(e){
+    document.querySelector('.phone-slider__wrapper').addEventListener("click", function(e){
         let elem = e.target;
         if (elem.nodeName == "IMG" && elem.parentElement.classList.contains('phone')) {
             elem.parentElement.querySelector('.invisible').classList.remove('invisible')
@@ -92,7 +92,7 @@
         if(parent.classList.contains('portfolio-triggers')) {
             parent.querySelector('.active').classList.remove('active')
             e.target.classList.add('active')
-            switch(e.target.textContent) {
+            /*switch(e.target.textContent) {
                 case "All":
                     break;
                 case "Web Design":
@@ -105,7 +105,7 @@
                     startIndex = 2;
                     endIndex = 9
                     break;
-            }
+            }*/
 
             document.querySelector('.portfolio-gallery').innerHTML = generateElementGallery(startIndex, endIndex)
         }      
@@ -127,12 +127,7 @@
     let submit = form.querySelector('input[type = "submit"]')
     let modal = document.querySelector('.dimmer.modals');
     submit.addEventListener('click', (e) => {
-      /* document.body.classList.add('dimmer')
-       modal.classList.remove('hidden')
-       modal.classList.add('visible')
-       let childNode = modal.children[0]
-       childNode.classList.remove('hidden')
-       childNode.classList.add('visible')*/
+
     })
     form.addEventListener('submit', (e) => {
         e.preventDefault();

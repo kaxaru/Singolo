@@ -400,11 +400,13 @@ section.service .service-flex{
     color: rgb(102, 109, 137);
 }
 
+.portfolio-triggers button:focus {
+    outline: none;
+}
+
 .portfolio-triggers button:first-child {
     margin: 0;
     margin-right: -2px;
-  /* border: 1px solid white;
-    color: white;*/
 }
 
 .portfolio-triggers button.active {
@@ -916,7 +918,9 @@ body.dimmable>.dimmer {
 }
 
 
-.basic.modal>.actions, .basic.modal>.content, .basic.modal>.header {
+.basic.modal>.actions, 
+.basic.modal>.content, 
+.basic.modal>.header {
     background-color: transparent;
 }
 
