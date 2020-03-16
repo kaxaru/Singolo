@@ -173,6 +173,14 @@ section.phone {
     background-color: rgb(240, 108, 100);
 }
 
+.phone-slider + .phone-slider {
+    background-color: rgb(76, 207, 137);
+}
+
+.phone-slider + .phone-slider + .phone-slider {
+    background-color: rgb(115, 39, 202);
+}
+
 .phone-slider__wrapper {
     display: flex;
     transition: transform .5s;
@@ -224,12 +232,28 @@ section.phone {
     margin-left: 111px;
 }
 
+.phone.vertical img {
+    position: relative;
+    z-index:0;
+}
+
 .phone.vertical img+img {
     position:absolute;
     left: -3px;
 }
 
-.phone img.invisible {
+.vertical__wrapper {
+    position: absolute;
+    margin-top: -2px;
+    margin-left: 110px;
+    z-index: 100;
+    width: 215px;
+    height: 459px;
+    border: .1px solid rgba(255,255,255, .2);
+    border-radius: 28px;
+}
+
+.phone img.phone-invisible {
     visibility: hidden;
 }
 
@@ -242,6 +266,18 @@ section.phone {
 .phone.horisontal img+img {
     position: absolute;
     left: 350px;
+}
+
+.horisontal__wrapper {
+    position: absolute;
+    z-index: 100;
+ 
+    margin-left: 72px;
+    padding-bottom: 3px;
+    width: 459px;
+    height: 211px;
+    border: .1px solid rgba(255,255,255, .2);
+    border-radius: 28px;
 }
 
 section.phone:after {

@@ -60,9 +60,14 @@
     // 3 Slider: activate phones
     document.querySelector('.phone-slider__wrapper').addEventListener("click", function(e){
         let elem = e.target;
-        if (elem.nodeName == "IMG" && elem.parentElement.classList.contains('phone')) {
-            elem.parentElement.querySelector('.invisible').classList.remove('invisible')
-            elem.classList.add('invisible')
+        if (elem.nodeName == "DIV" && (elem.classList.contains('vertical__wrapper') || elem.classList.contains('horisontal__wrapper')) && elem.parentElement.classList.contains('phone')) {
+            let parent = elem.parentElement
+            let invisiblePhone = parent.querySelector('.phone-invisible')
+            let visiblePhone = parent.querySelector('.phone-visible')
+            invisiblePhone.classList.remove('phone-invisible')
+            invisiblePhone.classList.add('phone-visible')
+            visiblePhone.classList.remove('phone-visible')
+            visiblePhone.classList.add('phone-invisible')
         }
     })
 
@@ -126,9 +131,7 @@
     let form = document.querySelector('#quote-form')
     let submit = form.querySelector('input[type = "submit"]')
     let modal = document.querySelector('.dimmer.modals');
-    submit.addEventListener('click', (e) => {
-
-    })
+ 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         let subject = e.currentTarget.querySelector('input[name = subject]');
