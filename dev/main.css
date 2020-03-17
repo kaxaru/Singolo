@@ -174,12 +174,16 @@ section.phone {
 }
 
 .phone-slider + .phone-slider {
-    background-color: rgb(76, 207, 137);
+    background-color: rgb(100, 139, 240);
 }
 
 .phone-slider + .phone-slider + .phone-slider {
     background-color: rgb(115, 39, 202);
 }
+
+/*.figma-slide {
+    background-image: url('../assets/pics/Slide-2.png');
+}*/
 
 .phone-slider__wrapper {
     display: flex;
@@ -984,6 +988,7 @@ body.dimmable>.dimmer {
 .modal .content span {
     display: block;
     text-align: center;
+    word-break: break-all;
 }
 
 .inverted.green.button, .inverted.green.buttons .button {
