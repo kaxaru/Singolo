@@ -1,12 +1,32 @@
 (function(){
     // 1 Header
+    let sections = ['home', 'services', 'portfolio', 'about', 'contact']
+    let header = document.getElementsByTagName('header')[0]
     document.querySelector('nav').addEventListener("click", function(e){
         if (e.target.nodeName === "A") {
+            e.preventDefault()
             e.currentTarget.querySelector('.active').classList.remove('active')
             e.target.classList.add('active')
+            let anchor = e.target.getAttribute('href')
+            let sectionsOffset = []
+            let offsetY = 0
+            for (let i = 0; i < sections.length; i++ ) {
+                if(`#${sections[i]}` != anchor)
+                    sectionsOffset.push(`#${sections[i]}`)
+                else
+                    break
+            }
+
+            sectionsOffset.map(s => {
+                offsetY += document.querySelector(s).offsetHeight
+            })
+
+            window.scrollTo({
+                top: offsetY,
+                behavior:  'smooth'
+            })
         }
     })
-
     // 2 Slider
 
     let slider = (setting) => {

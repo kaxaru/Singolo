@@ -63,9 +63,16 @@ button {
     font-size: 12px !important;
 }
 
+body {
+    scroll-behavior: smooth;
+}
+
 /*======================Header======================*/
 
 header {
+    position: fixed;
+    z-index: 200;
+    width: 1020px;
     background-color: rgb(45, 48, 58);
 }
 
@@ -153,6 +160,7 @@ nav a:hover {
 
 main {
     position: relative;
+    padding-top:90px;
 }
 
 section.phone {
