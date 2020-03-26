@@ -27,6 +27,11 @@
             })
         }
     })
+
+    document.addEventListener('scroll' , function(e) {
+        //change menu of links via event of scroll page
+    })
+
     // 2 Slider
 
     let slider = (setting) => {
