@@ -2,7 +2,27 @@
     // 1 Header
     let sections = ['home', 'services', 'portfolio', 'about', 'contact']
     let header = document.getElementsByTagName('header')[0]
-    document.querySelector('nav').addEventListener("click", function(e){
+
+    document.addEventListener('scroll' , function(e) {
+        let currentY = window.pageYOffset
+        let offsetY = 0;
+        for (let i = 0; i < sections.length; i++) {
+              offsetY += document.querySelector(`#${sections[i]}`).offsetHeight 
+            if (currentY < offsetY) {
+                let nav = document.querySelector('nav')
+                let currentMenu = getComputedStyle(nav).display == "none" ? '.hamburger-menu' : 'nav'
+
+                let lastActiveEl = document.querySelector(`${currentMenu} a.active`)
+                lastActiveEl.classList.remove('active') 
+                let activeEl = document.querySelector(`${currentMenu} a[href="#${sections[i]}"]`)
+                activeEl.classList.add('active')
+                break;
+                
+            }
+        }
+    })
+
+    let smoothScroll = (e) => {
         if (e.target.nodeName === "A") {
             e.preventDefault()
             e.currentTarget.querySelector('.active').classList.remove('active')
@@ -22,14 +42,26 @@
             })
 
             window.scrollTo({
-                top: offsetY,
+                top: offsetY + 1,
                 behavior:  'smooth'
             })
         }
-    })
+    }
 
-    document.addEventListener('scroll' , function(e) {
-        //change menu of links via event of scroll page
+    document.querySelector('nav').addEventListener("click", smoothScroll)
+    document.querySelector('.hamburger-menu').addEventListener("click", smoothScroll)
+
+    let mobileMenuBtn = document.querySelector('.menu__btn')
+    mobileMenuBtn.addEventListener('click', function(e) {
+        let inputMobileMenu = document.querySelector('.menu__toggle')
+        let h1 = document.querySelector('h1')
+        if(inputMobileMenu.checked) {
+            h1.classList.remove('invisible')
+            h1.classList.add('visible')
+        } else {
+            h1.classList.remove('visible')
+            h1.classList.add('invisible')
+        }
     })
 
     // 2 Slider
@@ -193,6 +225,5 @@
         let content = modal.querySelector('.content')
         content.innerHTML = '';
     })
-
 
 })()
