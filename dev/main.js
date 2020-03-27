@@ -6,19 +6,25 @@
     document.addEventListener('scroll' , function(e) {
         let currentY = window.pageYOffset
         let offsetY = 0;
-        for (let i = 0; i < sections.length; i++) {
-              offsetY += document.querySelector(`#${sections[i]}`).offsetHeight 
-            if (currentY < offsetY) {
-                let nav = document.querySelector('nav')
-                let currentMenu = getComputedStyle(nav).display == "none" ? '.hamburger-menu' : 'nav'
-
-                let lastActiveEl = document.querySelector(`${currentMenu} a.active`)
-                lastActiveEl.classList.remove('active') 
-                let activeEl = document.querySelector(`${currentMenu} a[href="#${sections[i]}"]`)
-                activeEl.classList.add('active')
-                break;
-                
-            }
+        let nav = document.querySelector('nav')
+        let currentMenu = getComputedStyle(nav).display == "none" ? '.hamburger-menu' : 'nav'
+        
+        if (window.pageYOffset + window.innerHeight >= document.body.scrollHeight) {
+            let lastActiveEl = document.querySelector(`${currentMenu} a.active`)
+            lastActiveEl.classList.remove('active') 
+            let activeEl = document.querySelector(`${currentMenu} a[href="#${sections[sections.length - 1]}"]`)
+            activeEl.classList.add('active')
+        } else {
+            for (let i = 0; i < sections.length; i++) {
+                offsetY += document.querySelector(`#${sections[i]}`).offsetHeight 
+              if (currentY < offsetY) {
+                  let lastActiveEl = document.querySelector(`${currentMenu} a.active`)
+                  lastActiveEl.classList.remove('active') 
+                  let activeEl = document.querySelector(`${currentMenu} a[href="#${sections[i]}"]`)
+                  activeEl.classList.add('active')
+                  break;
+              }
+          }
         }
     })
 
